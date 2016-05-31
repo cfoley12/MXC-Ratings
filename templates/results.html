@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link type="text/css" rel="stylesheet" href="/static/stylesheet.css" />
+
+<div class="formatted">
+    <h2>Results:</h2>
+    <div class="results_scroll">
+    <table>
+    	<tr class="results_key">
+    		<td> Place </td>
+    		<td> Year </td>
+    		<td> Name </td>
+    		<td> Time </td>
+    		<td> School </td>
+    		<td> Speed Rating </td>
+    	</tr>
+    {% for result in results %}
+    	<tr class="results">
+        	<td> {{ result[0] }} </td>
+        	<td> {{ result[1] }} </td>
+        	<td> {{ result[2] }} </td>
+        	<td> {{ result[3] }} </td>
+        	<td> {{ result[4] }} </td>
+        	<td> {{ result[6] }} </td>
+    	</tr>
+    {% endfor %}
+    </table>
+    </div>
+</div>
+
+{% endblock %}
